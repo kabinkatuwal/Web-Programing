@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temperature Page</title>
+    <script src="temperature.js" defer></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Profile</a></li>
+                <li><a href="grade.html">Mark to Grade</a></li>
+                <li><a href="staff.html">Staff Info</a></li>
+                <li><a href="temperature.html">Temperature Converter</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <h1>Temperature Converter</h1>
+            <input type="text" id="temp-input" placeholder="Enter temperature">
+            <select id="temp-unit">
+                <option value="celsius">Celsius</option>
+                <option value="fahrenheit">Fahrenheit</option>
+                <option value="kelvin">Kelvin</option>
+            </select>
+            <button onclick="convertTemperature()">Convert</button>
+            <p id="temp-error"></p>
+            <p id="celsius-display"></p>
+            <p id="fahrenheit-display"></p>
+            <p id="kelvin-display"></p>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; <span id="current-year"></span>My Personal Website. All rights reserved.</p>
+    </footer>
+    <script>
+        document.getElementById('current-year').textContent = new Date().toLocaleDateString();
+    </script>
+</body>
+</html>

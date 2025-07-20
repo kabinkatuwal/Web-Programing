@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Staff Page</title>
+    <script src="staff.js" defer></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Profile</a></li>
+                <li><a href="grade.html">Mark to Grade</a></li>
+                <li><a href="staff.html">Staff Info</a></li>
+                <li><a href="temperature.html">Temperature Converter</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <h2>Staff list</h2>
+            <button id="name-sort" onclick="toggleSort('name')">Name (none)</button>
+            <button id="salary-sort" onclick = "toggleSort('salary')">Salary (none)</button>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Salary</th>
+                    </tr>
+                </thead>
+                <tbody id="staff-table-body">
+                </tbody>
+            </table>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; <span id="current-year"></span>My Personal Website. All rights reserved.</p>
+    </footer>
+    <script>
+        document.getElementById('current-year').textContent = new Date().toLocaleDateString();
+    </script>
+</body>
+</html>

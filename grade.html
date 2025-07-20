@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mark to Grade Converter</title>
+    <script src="grade.js" defer></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Profile</a></li>
+                <li><a href="grade.html">Mark to Grade</a></li>
+                <li><a href="staff.html">Staff Info</a></li>
+                <li><a href="temperature.html">Temperature Converter</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <h1>Mark to Grade Converter</h1>
+            <h2>Enter Your Mark</h2>
+            <input type="text" id="mark-input-box" placeholder="Enter mark (0-100)">
+            <button onclick="markToGrade()">Convert</button>
+            <p id="validation-message" class="error"></p>
+            <p id="grade-display" class="grade"></p>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; <span id="current-year"></span>My Personal Website. All rights reserved.</p>
+    </footer>
+    <script>
+        document.getElementById('current-year').textContent = new Date().toLocalDateString();
+    </script>
+</body>
+</html>
